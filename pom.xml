@@ -4,15 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.binance.api</groupId>
+  <groupId>org.roboquant</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.1-SNAPSHOT</version>
   <licenses>
     <license>
       <name>The MIT License</name>
       <url>https://opensource.org/licenses/MIT</url>
     </license>
   </licenses>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>roboquant.repo</id>
+      <name>roboquant repository</name>
+      <url>https://roboquant.jfrog.io/artifactory/roboquant/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <properties>
     <com.squareup.retrofit2.version>2.4.0</com.squareup.retrofit2.version>
