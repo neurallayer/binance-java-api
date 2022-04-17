@@ -2,6 +2,15 @@
 
 binance-java-api is a lightweight Java library for interacting with the [Binance API](https://developers.binance.com/docs/api/scopes), providing complete API coverage, and supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.
 
+This is just a fork of the original repo with only few changes:
+
+1. Quicker release of patches to Maven repo
+2. Upgraded 3rd party libraries 
+3. Fixed warnings in Maven build 
+4. Use group-id `org.roboquant` (stay compliant with Maven Central regarding owning the domain name linked to the group-id)
+
+So package- and class-names are not changed and this should be a drop-in replacement. This library is also used by `roboquant`, a fast, flexible, free and user-friendly algo-trading platform written in Kotlin. Check it out at [roboquant.org](https://roboquant.org/)
+
 ## Features
 * Support for synchronous and asynchronous REST requests to all [General](https://www.binance.com/restapipub.html#user-content-general-endpoints), [Market Data](https://www.binance.com/restapipub.html#user-content-market-data-endpoints), [Account](https://www.binance.com/restapipub.html#user-content-account-endpoints) endpoints, and [User](https://www.binance.com/restapipub.html#user-content-user-data-stream-endpoints) stream endpoints.
 * Support for User Data, Trade, Kline, and Depth event streaming using [Binance WebSocket API](https://www.binance.com/restapipub.html#wss-endpoint).
@@ -11,13 +20,11 @@ binance-java-api is a lightweight Java library for interacting with the [Binance
 2. Add the following Maven dependency to your project's `pom.xml`:
 ```
 <dependency>
-  <groupId>com.binance.api</groupId>
+  <groupId>org.roboquant</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
 </dependency>
 ```
-
-Alternatively, you can clone this repository and run the [examples](https://github.com/joaopsilva/binance-java-api/tree/master/src/test/java/com/binance/api/examples).
 
 ## Examples
 
