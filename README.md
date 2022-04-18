@@ -4,7 +4,7 @@ binance-java-api is a lightweight Java library for interacting with the [Binance
 
 This is a fork of the original repo with a few changes:
 
-1. Quicker releases of patches to Maven Central repo
+1. Quicker releases of patches to a Maven repo (jitpack.io)
 2. Upgraded retrofit2 library 
 3. Fixed warnings in the Maven build
 4. Upgraded `jackson-databind` due to a vulnerability
@@ -18,7 +18,10 @@ Package- and class-names are not changed and so this should be a drop-in replace
 * Support for synchronous and asynchronous REST requests to all [General](https://www.binance.com/restapipub.html#user-content-general-endpoints), [Market Data](https://www.binance.com/restapipub.html#user-content-market-data-endpoints), [Account](https://www.binance.com/restapipub.html#user-content-account-endpoints) endpoints, and [User](https://www.binance.com/restapipub.html#user-content-user-data-stream-endpoints) stream endpoints.
 * Support for User Data, Trade, Kline, and Depth event streaming using [Binance WebSocket API](https://www.binance.com/restapipub.html#wss-endpoint).
 
-## Installation Maven
+## Installation 
+Replace `...RELEASE-VERSION...` with the release version you want. The latest release is: ![GitHub release (latest by date)](https://img.shields.io/github/v/release/neurallayer/binance-java-api)
+
+### Maven
 1. Add the JitPack repository to your build file
 ```
 <repositories>
@@ -34,11 +37,11 @@ Package- and class-names are not changed and so this should be a drop-in replace
 <dependency>
   <groupId>org.roboquant</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>1.0.1</version>
+  <version>...RELEASE-VERSION...</version>
 </dependency>
 ```
 
-## Installation Gradle
+### Gradle
 1. Add the JitPack repository to your build file
 ```
 allprojects {
@@ -51,7 +54,7 @@ allprojects {
 2. Add the dependency
 ```
 dependencies {
-	implementation 'org.roboquant:binance-java-api:1.0.1'
+	implementation 'org.roboquant:binance-java-api:...RELEASE-VERSION...'
 }
 ```
 
