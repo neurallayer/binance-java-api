@@ -6,9 +6,10 @@ This is a fork of the original repo with a few changes:
 
 1. Quicker releases of patches to Maven Central repo
 2. Upgraded retrofit2 library 
-3. Fixed warnings in the Maven build 
-4. Added required configuration to pom.xml to make it possible to release to Maven Central 
-5. Use group-id `org.roboquant` (stay compliant with Maven Central regarding owning the domain name linked to the group-id)
+3. Fixed warnings in the Maven build
+4. Upgraded `jackson-databind` due to vulnerability
+5. Added required configuration to pom.xml to make it possible to release to Maven Central 
+6. Use group-id `org.roboquant` (stay compliant with Maven Central regarding owning the domain name linked to the group-id)
 
 In the future we might also include some of the pending PR's from the main repo (especially those that reflect changes to the Binance API)
 
