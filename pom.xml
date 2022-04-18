@@ -6,7 +6,8 @@
 
     <groupId>org.roboquant</groupId>
     <artifactId>binance-api-client</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
+    <url>https://github.com/neurallayer/binance-java-api.git</url>
 
     <name>Java client for the Binance API</name>
     <description>binance-java-api is a lightweight Java library for interacting with the Binance API, providing complete
@@ -46,6 +47,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.2.2</version>
+        </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>retrofit</artifactId>
@@ -131,7 +137,7 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.8</version>
+                        <version>1.6.12</version>
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>ossrh</serverId>

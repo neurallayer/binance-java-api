@@ -2,13 +2,15 @@
 
 binance-java-api is a lightweight Java library for interacting with the [Binance API](https://developers.binance.com/docs/api/scopes), providing complete API coverage, and supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.
 
-This is just a fork of the original repo with only few changes:
+This is a fork of the original repo with a few changes:
 
 1. Quicker releases of patches to Maven Central repo
-2. Upgraded 3rd party libraries 
-3. Fixed warnings in Maven build 
+2. Upgraded retrofit2 library 
+3. Fixed warnings in the Maven build 
 4. Added required configuration to pom.xml to make it possible to release to Maven Central 
 5. Use group-id `org.roboquant` (stay compliant with Maven Central regarding owning the domain name linked to the group-id)
+
+In the future we might also include some of the pending PR's from the main repo (especially those that reflect changes to the Binance API)
 
 So package- and class-names are not changed and this should be a drop-in replacement. This library is also used by `roboquant`, a fast, flexible, free and user-friendly algo-trading platform written in Kotlin. Check it out at [roboquant.org](https://roboquant.org/)
 
@@ -23,7 +25,7 @@ So package- and class-names are not changed and this should be a drop-in replace
 <dependency>
   <groupId>org.roboquant</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
