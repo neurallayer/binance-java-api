@@ -7,27 +7,52 @@ This is a fork of the original repo with a few changes:
 1. Quicker releases of patches to Maven Central repo
 2. Upgraded retrofit2 library 
 3. Fixed warnings in the Maven build
-4. Upgraded `jackson-databind` due to vulnerability
-5. Added required configuration to pom.xml to make it possible to release to Maven Central 
-6. Use group-id `org.roboquant` (stay compliant with Maven Central regarding owning the domain name linked to the group-id)
+4. Upgraded `jackson-databind` due to a vulnerability
+5. Use group-id `org.roboquant` (stay compliant with Maven Central regarding owning the domain name linked to the group-id)
 
-In the future we might also include some of the pending PR's from the main repo (especially those that reflect changes to the Binance API)
+In the future we might also include some of the pending PR's from the main repo, especially those that reflect changes to the Binance API.
 
-So package- and class-names are not changed and this should be a drop-in replacement. This library is also used by `roboquant`, a fast, flexible, free and user-friendly algo-trading platform written in Kotlin. Check it out at [roboquant.org](https://roboquant.org/)
+Package- and class-names are not changed and so this should be a drop-in replacement. This library is also used by `roboquant`, a fast, flexible, free and user-friendly algo-trading platform written in Kotlin. Check it out at [roboquant.org](https://roboquant.org/)
 
 ## Features
 * Support for synchronous and asynchronous REST requests to all [General](https://www.binance.com/restapipub.html#user-content-general-endpoints), [Market Data](https://www.binance.com/restapipub.html#user-content-market-data-endpoints), [Account](https://www.binance.com/restapipub.html#user-content-account-endpoints) endpoints, and [User](https://www.binance.com/restapipub.html#user-content-user-data-stream-endpoints) stream endpoints.
 * Support for User Data, Trade, Kline, and Depth event streaming using [Binance WebSocket API](https://www.binance.com/restapipub.html#wss-endpoint).
 
-## Installation
-1. Install library into your Maven's local repository by running `mvn install`
-2. Add the following Maven dependency to your project's `pom.xml`:
+## Installation Maven
+1. Add the JitPack repository to your build file
+```
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+2. Add the dependency:
 ```
 <dependency>
   <groupId>org.roboquant</groupId>
   <artifactId>binance-api-client</artifactId>
   <version>1.0.1</version>
 </dependency>
+```
+
+## Installation Gradle
+1. Add the JitPack repository to your build file
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+2. Add the dependency
+```
+dependencies {
+	implementation 'org.roboquant:binance-java-api:1.0.1'
+}
 ```
 
 ## Examples
