@@ -4,11 +4,12 @@ binance-java-api is a lightweight Java library for interacting with the [Binance
 
 This is a fork of the original repo with a few changes:
 
-1. Quicker releases of patches to a Maven repo (jitpack.io)
+1. Releases with patches to a Maven Central repo
 2. Upgraded retrofit2 library 
 3. Fixed warnings in the Maven build
-4. Upgraded `jackson-databind` due to a vulnerability
-5. Use group-id `org.roboquant` (stay compliant with Maven Central regarding owning the domain name linked to the group-id)
+4. Added required release functionality to `pom.xml` file
+5. Upgraded `jackson-databind` due to a vulnerability
+6. Use group-id `org.roboquant` (stay compliant with Maven Central regarding owning the domain name linked to the group-id)
 
 In the future we might also include some of the pending PR's from the main repo, especially those that reflect changes to the Binance API.
 
@@ -19,42 +20,25 @@ Package- and class-names are not changed and so this should be a drop-in replace
 * Support for User Data, Trade, Kline, and Depth event streaming using [Binance WebSocket API](https://www.binance.com/restapipub.html#wss-endpoint).
 
 ## Installation 
-Replace `...RELEASE-VERSION...` with the release version you want. The latest release is: ![GitHub release (latest by date)](https://img.shields.io/github/v/release/neurallayer/binance-java-api)
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.roboquant/binance-api-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.roboquant/binance-api-client)
 
 ### Maven
-1. Add the JitPack repository to your build file
-```
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-```
+Add the dependency to your pom.xml file.
 
-2. Add the dependency:
 ```
 <dependency>
   <groupId>org.roboquant</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>...RELEASE-VERSION...</version>
+  <version>1.0.2</version>
 </dependency>
 ```
 
 ### Gradle
-1. Add the JitPack repository to your build file
-```
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-    }
-}
-```
-2. Add the dependency
+Add the dependency to your gradle build file
 ```
 dependencies {
-	implementation 'org.roboquant:binance-java-api:...RELEASE-VERSION...'
+	implementation 'org.roboquant:binance-java-api:1.0.2'
 }
 ```
 
