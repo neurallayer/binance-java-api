@@ -30,7 +30,7 @@ Add the dependency to your pom.xml file.
 <dependency>
   <groupId>org.roboquant</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 
@@ -38,7 +38,7 @@ Add the dependency to your pom.xml file.
 Add the dependency to your gradle build file
 ```
 dependencies {
-	implementation 'org.roboquant:binance-java-api:1.0.2'
+	implementation 'org.roboquant:binance-java-api:1.0.4'
 }
 ```
 
