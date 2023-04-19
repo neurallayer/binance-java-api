@@ -1,27 +1,25 @@
-= Java Binance API
+= Java Binance API client
 
 image:https://img.shields.io/github/languages/code-size/neurallayer/binance-java-api[GitHub code size]
 image:https://img.shields.io/github/last-commit/neurallayer/binance-java-api[[GitHub last commit]
 image:https://img.shields.io/maven-central/v/org.roboquant/binance-api-client[?color=blue&[Maven Central]
 image:https://sonarcloud.io/api/project_badges/measure?project=neurallayer_binance-java-api&metric=security_rating[Security Rating, link=https://sonarcloud.io/component_measures?metric=new_security_rating&view=list&id=neurallayer_binance-java-api]
 
-image::/docs/roboquant_header.png[roboquant Logo, align="center", link="https://roboquant.org"]
+The binance-java-api is a lightweight Java library for interacting with the https://developers.binance.com/docs/api/scopes[Binance API], providing complete API coverage, and supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.
 
-This version of the Java Binance client API is maintained as part of roboquant.
+This version of the Java Binance client API is a fork of the official git repo and maintained as part of _roboquant_. However, it doesn't have any dependencies on _roboquant_ and can be used the same way as the original version.
+
+image::/docs/roboquant_header.png[roboquant Logo, align="center", link="https://roboquant.org"]
 
 _Roboquant_ is an algorithmic trading platform that is very fast and flexible while at the same time strives to be easy to use. It is fully open source, written in Kotlin, and can be used in Jupyter Notebooks as well as standalone JVM applications.
 
 You can find out more at *https://roboquant.org[roboquant.org]*.
 
+== Changes
+This is repo several important changes compared to the original repo:
 
-== Binance client
-
-The binance-java-api is a lightweight Java library for interacting with the https://developers.binance.com/docs/api/scopes[Binance API], providing complete API coverage, and supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.
-
-This is repo contains a fork of the original repo with a few important changes:
-
-* Patched releases to Maven Central repo so they can be easily included in your own application
-* Added missing attributes to the Java classes, so there are no exceptions with newer JSON responses
+* Release of patched versions to Maven Central repo, so they can be easily included in your own application
+* Added missing attributes to the Java classes, so there are no exceptions with newer API versions
 * Upgraded retrofit2 library
 * Fixed warnings in the Maven build
 * Added required release functionality to `pom.xml` file
@@ -33,13 +31,12 @@ In the future we might also include some of the pending PR's from the main repo,
 Package- and class-names are not changed and so this should be a drop-in replacement.
 
 == Features
-
 * Support for synchronous and asynchronous REST requests to all https://www.binance.com/restapipub.html#user-content-general-endpoints[General], https://www.binance.com/restapipub.html#user-content-market-data-endpoints[Market Data], https://www.binance.com/restapipub.html#user-content-account-endpoints[Account] endpoints, and https://www.binance.com/restapipub.html#user-content-user-data-stream-endpoints[User] stream endpoints.
 * Support for User Data, Trade, Kline, and Depth event streaming using https://www.binance.com/restapipub.html#wss-endpoint[Binance WebSocket API].
 
 == Installation
 
-image:https://maven-badges.herokuapp.com/maven-central/org.roboquant/binance-api-client/badge.svg[Maven Central,link=https://maven-badges.herokuapp.com/maven-central/org.roboquant/binance-api-client]
+latest version: image:https://maven-badges.herokuapp.com/maven-central/org.roboquant/binance-api-client/badge.svg[Maven Central,link=https://maven-badges.herokuapp.com/maven-central/org.roboquant/binance-api-client]
 
 === Maven
 Add the dependency to your pom.xml file.
@@ -50,7 +47,6 @@ Add the dependency to your pom.xml file.
   <artifactId>binance-api-client</artifactId>
   <version>1.0.5</version>
 </dependency>
-
 ----
 
 === Gradle
