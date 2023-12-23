@@ -1,4 +1,6 @@
+// suppress inspection "Annotator" for whole file
 = Java Binance API client
+:source-highlighter: rouge
 
 image:https://img.shields.io/github/languages/code-size/neurallayer/binance-java-api[GitHub code size]
 image:https://img.shields.io/github/last-commit/neurallayer/binance-java-api[[GitHub last commit]
@@ -9,26 +11,41 @@ The binance-java-api is a lightweight Java library for interacting with the http
 
 This version of the Java Binance client API is a fork of the official git repo and maintained as part of _roboquant_. However, it doesn't have any dependencies on _roboquant_ and can be used the same way as the original version.
 
+But if you are interested in algo-trading using Binance, make sure to check it out. The following code snippet shows all the steps required to run a full back test on two crypto pairs:
+
+[source,kotlin,indent=0]
+----
+// Set up the data feed and retrieve 1-minute candlesticks
+// for two crypto pairs for the last day
+val feed = BinanceHistoricFeed()
+val timeframe = Timeframe.past(1.days)
+feed.retrieve("BTCBUSD", "ETHBUSD", timeframe = timeframe, interval = Interval.ONE_MINUTE)
+
+// Run a back test over this data
+val roboquant = Roboquant(EMAStrategy())
+roboquant.run(feed)
+----
+
 image::/docs/roboquant_header.png[roboquant Logo, align="center", link="https://roboquant.org"]
 
-_Roboquant_ is an algorithmic trading platform that is very fast and flexible while at the same time strives to be easy to use. It is fully open source, written in Kotlin, and can be used in Jupyter Notebooks as well as standalone JVM applications.
+_Roboquant_ is an algorithmic trading platform that is lightning fast and flexible while at the same time strives to be convenient to use. It is fully open source, written in Kotlin, and can be used in Jupyter Notebooks as well as standalone JVM applications.
 
 You can find out more at *https://roboquant.org[roboquant.org]*.
 
 == Changes
-This is repo several important changes compared to the original repo:
+This is a repo several important changes compared to the original repo:
 
 * Release of patched versions to Maven Central repo, so they can be easily included in your own application
 * Added missing attributes to the Java classes, so there are no exceptions with newer API versions
-* Upgraded retrofit2 library
+* Upgraded the retrofit2 library
 * Fixed warnings in the Maven build
 * Added required release functionality to `pom.xml` file
 * Upgraded `jackson-databind` due to a vulnerability
 * Use group-id `org.roboquant` (stay compliant with Maven Central regarding owning the domain name linked to the group-id)
 
-In the future we might also include some of the pending PR's from the main repo, especially those that reflect changes to the Binance API.
+In the future, we might also include some of the pending PR's from the main repo, especially those that reflect changes to the Binance API.
 
-Package- and class-names are not changed and so this should be a drop-in replacement.
+Package- and class-names are not changed, and so this should be a drop-in replacement.
 
 == Features
 * Support for synchronous and asynchronous REST requests to all https://www.binance.com/restapipub.html#user-content-general-endpoints[General], https://www.binance.com/restapipub.html#user-content-market-data-endpoints[Market Data], https://www.binance.com/restapipub.html#user-content-account-endpoints[Account] endpoints, and https://www.binance.com/restapipub.html#user-content-user-data-stream-endpoints[User] stream endpoints.

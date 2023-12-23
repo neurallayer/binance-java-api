@@ -2,8 +2,6 @@ package com.binance.api.client;
 
 import com.binance.api.client.domain.SwapRemoveType;
 import com.binance.api.client.domain.account.*;
-import retrofit2.Call;
-import retrofit2.http.Query;
 
 import java.util.List;
 

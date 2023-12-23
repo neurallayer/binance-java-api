@@ -89,6 +89,7 @@ public class BinanceApiWebSocketClientImpl implements BinanceApiWebSocketClient,
      * @deprecated This method is no longer functional. Please use the returned {@link Closeable} from any of the other methods to close the web socket.
      */
     @Override
+    @Deprecated
     public void close() {
     }
 
