@@ -67,7 +67,7 @@ Add the dependency to your pom.xml file.
 ----
 
 === Gradle
-Add the dependency to your gradle build file
+Add the dependency to your Gradle build file
 
 ----
 dependencies {
