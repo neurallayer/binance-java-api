@@ -8,6 +8,6 @@ image:https://img.shields.io/maven-central/v/org.roboquant/binance-api-client[?c
 image:https://sonarcloud.io/api/project_badges/measure?project=neurallayer_binance-java-api&metric=security_rating[Security Rating, link=https://sonarcloud.io/component_measures?metric=new_security_rating&view=list&id=neurallayer_binance-java-api]
 
 
-> [!WARNING]
-> As Binance is no longer supporting the original version of this library, this fork will also be no longer supported. Please consider the officially supported Java library available at https://github.com/binance/binance-connector-java
+[!WARNING]
+As Binance is no longer supporting the original version of this library, this fork will also be no longer supported. Please consider the officially supported Java library available at https://github.com/binance/binance-connector-java
 
